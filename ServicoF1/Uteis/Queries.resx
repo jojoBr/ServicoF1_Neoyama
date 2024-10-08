@@ -1,0 +1,891 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Busca_Contatos" xml:space="preserve">
+    <value>Select
+            ISNULL(T0.Active, '') AS 'Contato Ativo', --0
+            ISNULL(T0.Position, 'Geral') AS 'Contato posicao', --1
+            ISNULL(T0.Name, '') AS 'Contato Nome', --2
+            ISNULL(T0.E_MailL, '') AS 'Contato E-mail', --3
+            0 AS 'is_telesales', --4
+            0 AS 'purchasing_limit', --5
+            1 AS 'visualize_only_owned_orders', --6
+            0 AS 'permission_place_orders', --7
+            0 AS 'permission_open_rma', --8
+            0 AS 'permission_get_orders', --9
+            1 AS 'permission_visualize_prices', --10
+            0 AS 'permission_allow_orders_ignoring_purchasing_limit', --11
+            T0.CntctCode, --12
+            CASE
+            WHEN LEN(T2.TaxId0) &gt; 0 THEN TaxId0  
+            WHEN LEN(T2.TaxId4) &gt; 0 THEN TaxId4
+            END AS 'cgc' -- 13
+            FROM OCPR T0 LEFT JOIN OCRD T1 ON T0.CardCode = T1.CardCode LEFT JOIN CRD7 T2 ON T2.CardCode = T0.CardCode 
+            WHERE T1.U_CadastraF1 = 'Y'
+            @anexo</value>
+  </data>
+  <data name="Busca_Parceiro" xml:space="preserve">
+    <value>SELECT
+            CASE
+            WHEN LEN(T2.TaxId0) &gt; 0 THEN TaxId0  
+            WHEN LEN(T2.TaxId4) &gt; 0 THEN TaxId4
+            END AS 'cgc', -- 1
+            ISNULL(T0.CardCode, '') AS 'CardCode',--2
+            CASE
+            WHEN LEN(T2.TaxId0) &gt; 0 THEN 'J'
+            WHEN LEN(T2.TaxId4) &gt; 0 THEN 'F'
+            END AS 'Tipo Pessoa',--3
+            T4.TributType AS 'tax_regime', --4
+            ISNULL(T0.AliasName, '') AS 'Nome Estrângeiro', --5
+            ISNULL(T0.CardName, '') 'CardName', --6
+            IsNULL(T2.TaxId1, '') AS 'Inscrição Estadual', --7
+            IsNULL(T2.TaxId3, '') AS 'Inscrição Municipal', --8
+            IsNULL(T2.TaxId8, '') AS 'Suframa', --9
+            '',--""suframa_expiration_date"" --10
+            CONCAT(ISNULL(T0.Phone2, ''), ISNULL(T0.Phone1, '')) AS 'Telefone', -- 11
+            ISNULL(T0.Cellular, '') AS 'Celular', --12
+            ISNULL(T0.E_Mail, '') AS 'E-Mail', --13
+            T0.U_area_negocio as 'external_segment_code', --14
+            ISNULL(T0.ListNum, '') AS 'Lista de Preço', --15
+            T0.CreditLine AS 'Credit Line', --16
+            T5.GroupNum as 'average_payment_period', --17
+            0,--""allow_post_payment"" --18
+            '',--""default_order_type"" --19
+            'REVE',--""default_operation_type"" --20
+            '',--""exclusive_payment_method_condition_installment"" -- 21
+            '',--""simples_code"" --22
+            ISNULL(U_Moderado_Ativo, 'N'),--""moderated"" --23
+            '',--""created"" --24
+            ISNULL(Delivery.Street, '') AS 'Rua de Enrega', --25
+            ISNULL(Delivery.StreetNo, '') AS 'Numero de entrega', --26
+            ISNULL(Delivery.Building, '') AS 'entrega predio', --27
+            ISNULL(Delivery.State, '') AS 'Entrega estado', --28
+            ISNULL(Delivery.City, '') AS 'Entrega Cidade', --29
+            ISNULL(Delivery.Block, '') AS 'Entrega Bairro', --30
+            ISNULL(Delivery.Country, '') AS 'Entrega pais', --31
+            '',--""delivery_address_reference"" --32 
+            ISNULL(Delivery.ZipCode, '') AS 'Entrega CEP', --33
+            ISNULL(Charge.Street, '') AS 'cobranca rua', --34
+            ISNULL(Charge.StreetNo, '') AS 'cobranca numero', --35
+            ISNULL(Charge.Building, '') AS 'cobranca predio', --36
+            ISNULL(Charge.State, '') AS 'cobranca estado', --37
+            ISNULL(Charge.City, '') AS 'cobranca cidade', --38
+            ISNULL(Charge.Block, '') AS 'cobranca bairro', --39
+            ISNULL(Charge.Country, '') AS 'cobranca pais', --40
+            '',--""charge_address_reference"" -- 41
+            ISNULL(Charge.ZipCode, '') AS 'cobranca CEP', --42
+            1,--""active"" --43
+            ISNULL(T3.Active, '') AS 'Contato Ativo', --44
+            ISNULL(T3.Position, '') AS 'Contato posicao', --45
+            ISNULL(T3.Name, '') AS 'Contato Nome', --46
+            ISNULL(T3.E_MailL, '') AS 'Contato E-mail', --47
+            0 AS 'is_telesales', --48
+            0 AS 'purchasing_limit', --49
+            1 AS 'visualize_only_owned_orders', --50
+            0 AS 'permission_place_orders', --51
+            0 AS 'permission_open_rma', --52
+            0 AS 'permission_get_orders', --53
+            1 AS 'permission_visualize_prices', --54
+            0 AS 'permission_allow_orders_ignoring_purchasing_limit', --55
+            T3.CntctCode, --56
+            T0.SlpCode,--57
+            ISNULL(T0.U_CadastraF1, 'N'), --58
+            T0.Balance, -- 59
+            T0.U_simples, -- 60'
+            T0.U_TX_IndIEDest, -- 61
+            T0.U_TX_IndFinal, -- 62
+			T0.OrdersBal, --63
+			T0.U_Sell_Types, --64
+			T6.ListName, --65
+			T0.U_email_f1
+            FROM OCRD T0
+            LEFT JOIN(SELECT *
+                              FROM CRD1
+
+                              WHERE "AdresType" = 'S'
+                              ) Delivery on Delivery."CardCode" = T0."CardCode" AND Delivery.Address = T0."ShipToDef"
+            LEFT JOIN(SELECT*
+                              FROM CRD1
+                              WHERE "AdresType" = 'B'
+				              ) Charge on Charge."CardCode" = T0."CardCode" AND Charge.Address = T0."BillToDef"
+            LEFT JOIN CRD7 T2 ON T0.CardCode = T2.CardCode
+            LEFT JOIN OCPR T3 ON T0.CardCode = T3.CardCode
+            LEFT JOIN CRD11 T4 ON T0.CardCode = T4.CardCode
+            LEFT JOIN OCTG T5 ON T0.GroupNum = T5.GroupNum
+			LEFT JOIN OPLN T6 ON T0.ListNum = T6.ListNum
+
+            where
+            t2.AddrType = 'S' and T0.CardType = 'c' AND UPPER(T0.CardCode) like 'C%' AND ISNULL(T4.TTEndDate, CAST(GETDATE() AS DATE)) &gt;= CAST(GETDATE() AS DATE)
+			AND  T4.TributType in (Select Code FROM OBNI WHERE IndexType = 18)
+			 @anexo</value>
+  </data>
+  <data name="Busca_Tributos_IPI" xml:space="preserve">
+    <value>select 
+distinct
+'*' as ItemCode, a.NcmCode as Ncm, '*' as 'client_cnpj', '*' as 'city_destination', '*' as 'home_state', '*' as 'destination_state', 
+'*' as 'production_origin', '*' as 'tax_regime', '*' as 'sell_type', '*' as 'nature_operation', b.u_Aliquota as 'ipi' 
+from 
+oncm a 
+inner join oncg b on a."Group"=b."GroupCode" 
+inner join oitm c on c.NCMCode=a.AbsEntry
+where a."Group" is not null AND U_CadastrarF1 = 'Y'</value>
+  </data>
+  <data name="Busca_tributos_por_uso" xml:space="preserve">
+    <value>declare @tiposChave table 
+(id int,
+ descr char(30))
+insert into @tiposChave (id, descr) values (1,'PN')
+insert into @tiposChave (id, descr) values (2,'ITEM')
+insert into @tiposChave (id, descr) values (3,'GRUPO_DE_MATERIAIS')
+insert into @tiposChave (id, descr) values (5,'NCM')
+insert into @tiposChave (id, descr) values (6,'UF')
+insert into @tiposChave (id, descr) values (9,'GRUPO_DE_ITEM')
+insert into @tiposChave (id, descr) values (11,'GRUPO_DE_CLIENTES')
+insert into @tiposChave (id, descr) values (12,'GRUPO_DE_FORNECEDORES')
+insert into @tiposChave (id, descr) values (16,'FILIAL')
+insert into @tiposChave (id, descr) values (26,'TIPO_TRIBUTARIO_PN')
+insert into @tiposChave (id, descr) values (27,'GRUPO_DE_ESTADO')
+insert into @tiposChave (id, descr) values (28,'GRUPO_DE_CODIGO_DE_ORIGEM')
+insert into @tiposChave (id, descr) values (29,'GRUPO_DE_CODIGO_NCM')
+
+
+select 
+d.priority as Prioridade, 
+d.DESCR,
+(select bx.U_Lucro  from STC1 ax inner join OSTA bx on ax.STaCode=bx.Code 
+where ax.statype='7' and bx.Type=7 and a.taxcode=ax.stCcode) as 'MVA',
+
+isnull((select descr from @tiposchave where id=keyfld_1),'') as chave1 ,
+isnull((select descr from @tiposchave where id=keyfld_2),'') as chave2 , 
+isnull((select descr from @tiposchave where id=keyfld_3),'') as chave3 , 
+isnull((select descr from @tiposchave where id=keyfld_4),'') as chave4 , 
+isnull((select descr from @tiposchave where id=keyfld_5),'') as chave5 , 
+
+CampoChave1 = case when d.keyfld_1=1 then (select top 1 taxid0  from crd7  where taxid0 is not null and c.keyfld_1_v=cardcode)
+                           when d.keyfld_1=2 then (select ItemCode from oitm where c.keyfld_1_v=itemcode)
+                           when d.keyfld_1=3 then (select descrip from omgp where c.keyfld_1_v=absEntry)
+                         when d.keyfld_1=5 then (select ncmcode from oncm where c.keyfld_1_v=absEntry)
+                           when d.keyfld_1=6  then C.keyfld_1_v 
+                           when d.keyfld_1=9 then (select itmsgrpnam from oitb where c.keyfld_1_v=itmsgrpcod)
+                           when d.keyfld_1 in (11,12) then (select groupname from ocrg where c.keyfld_1_v=groupcode) 
+                           when d.keyfld_1=26 then (select Descr from obni where IndexType='18' and ID=c.keyfld_1_v)
+                           when d.KeyFld_1=27 then (select groupName from ostg where GroupCode=c.KeyFld_1_V)
+                           when d.KeyFld_1=28 then (select groupName from opsg where GroupCode=c.KeyFld_1_V)
+                           when d.KeyFld_1=29 then (select groupName from oncg where GroupCode=c.KeyFld_1_V)
+                           when d.keyfld_1=16 then (select BplName from OBPL where c.keyfld_1_v=BplId) end,         
+
+CampoChave2 = case when d.keyfld_2=1 then (select cardname from ocrd where c.keyfld_2_v=cardcode)
+                           when d.keyfld_2=2 then (select itemCode from oitm where c.keyfld_2_v=itemcode)
+                           when d.keyfld_2=3 then (select descrip from omgp where c.keyfld_2_v=absEntry)
+                         when d.keyfld_2=5 then (select ncmcode from oncm where c.keyfld_2_v=absEntry)
+                           when d.keyfld_2=6  then C.keyfld_2_v 
+                           when d.keyfld_2=9 then (select itmsgrpnam from oitb where c.keyfld_2_v=itmsgrpcod)
+                           when d.keyfld_2 in (11,12) then (select groupname from ocrg where c.keyfld_2_v=groupcode) 
+                           when d.keyfld_2=26 then (select Descr from obni where IndexType='18' and ID=c.keyfld_2_v)
+                           when d.keyfld_2=27 then (select groupName from ostg where GroupCode=c.keyfld_2_V)
+                           when d.keyfld_2=28 then (select groupName from opsg where GroupCode=c.keyfld_2_V)
+                           when d.keyfld_2=29 then (select groupName from oncg where GroupCode=c.keyfld_2_V)
+                           when d.keyfld_2=16 then (select BplName from OBPL where c.keyfld_2_v=BplId) end,   
+
+
+CampoChave3 = case when d.keyfld_3=1 then (select cardname from ocrd where c.keyfld_3_v=cardcode)
+                           when d.keyfld_3=2 then (select itemCode from oitm where c.keyfld_3_v=itemcode)
+                           when d.keyfld_3=3 then (select descrip from omgp where c.keyfld_3_v=absEntry)
+                         when d.keyfld_3=5 then (select ncmcode from oncm where c.keyfld_3_v=absEntry)
+                           when d.keyfld_3=6  then C.keyfld_3_v 
+                           when d.keyfld_3=9 then (select itmsgrpnam from oitb where c.keyfld_3_v=itmsgrpcod)
+                           when d.keyfld_3 in (11,12) then (select groupname from ocrg where c.keyfld_3_v=groupcode) 
+                           when d.keyfld_3=26 then (select Descr from obni where IndexType='18' and ID=c.keyfld_3_v)
+                           when d.keyfld_3=27 then (select groupName from ostg where GroupCode=c.keyfld_3_V)
+                           when d.keyfld_3=28 then (select groupName from opsg where GroupCode=c.keyfld_3_V)
+                           when d.keyfld_3=29 then (select groupName from oncg where GroupCode=c.keyfld_3_V)
+                           when d.keyfld_3=16 then (select BplName from OBPL where c.keyfld_3_v=BplId) end,  
+                           
+CampoChave4 = case when d.keyfld_4=1 then (select cardname from ocrd where c.keyfld_4_v=cardcode)
+                           when d.keyfld_4=2 then (select itemCode from oitm where c.keyfld_4_v=itemcode)
+                           when d.keyfld_4=3 then (select descrip from omgp where c.keyfld_4_v=absEntry)
+                         when d.keyfld_4=5 then (select ncmcode from oncm where c.keyfld_4_v=absEntry)
+                           when d.keyfld_4=6  then C.keyfld_4_v 
+                           when d.keyfld_4=9 then (select itmsgrpnam from oitb where c.keyfld_4_v=itmsgrpcod)
+                           when d.keyfld_4 in (11,12) then (select groupname from ocrg where c.keyfld_4_v=groupcode) 
+                           when d.keyfld_4=26 then (select Descr from obni where IndexType='18' and ID=c.keyfld_4_v)
+                           when d.keyfld_4=27 then (select groupName from ostg where GroupCode=c.keyfld_4_V)
+                           when d.keyfld_4=28 then (select groupName from opsg where GroupCode=c.keyfld_4_V)
+                           when d.keyfld_4=29 then (select groupName from oncg where GroupCode=c.keyfld_4_V)
+                           when d.keyfld_4=16 then (select BplName from OBPL where c.keyfld_4_v=BplId) end,         
+
+CampoChave5 = case when d.keyfld_5=1 then (select cardname from ocrd where c.keyfld_5_v=cardcode)
+                           when d.keyfld_5=2 then (select itemCode from oitm where c.keyfld_5_v=itemcode)
+                           when d.keyfld_5=3 then (select descrip from omgp where c.keyfld_5_v=absEntry)
+                         when d.keyfld_5=5 then (select ncmcode from oncm where c.keyfld_5_v=absEntry)
+                           when d.keyfld_5=6  then C.keyfld_5_v 
+                           when d.keyfld_5=9 then (select itmsgrpnam from oitb where c.keyfld_5_v=itmsgrpcod)
+                           when d.keyfld_5 in (11,12) then (select groupname from ocrg where c.keyfld_5_v=groupcode) 
+                           when d.keyfld_5=26 then (select Descr from obni where IndexType='18' and ID=c.keyfld_5_v)
+                           when d.keyfld_5=27 then (select groupName from ostg where GroupCode=c.keyfld_5_V)
+                           when d.keyfld_5=28 then (select groupName from opsg where GroupCode=c.keyfld_5_V)
+                           when d.keyfld_5=29 then (select groupName from oncg where GroupCode=c.keyfld_5_V)
+                           when d.keyfld_5=16 then (select BplName from OBPL where c.keyfld_5_v=BplId) end,         
+
+
+
+efctFrom as 'Desde',
+efctto as 'Ate', 
+(select usage from ousg where id=a.usagecode) as 'Utilizacao',
+a.taxcode as 'Código do Imposto',
+ROW_NUMBER() OVER (
+
+ORDER BY d.Priority
+
+) row_num
+
+into #tab
+
+from 
+tcd5 a
+inner join tcd3 b on a.tcd3id=b.absid
+inner join tcd2 c on b.tcd2id=c.absid
+inner join tcd1 d on c.tcd1id=d.absid
+
+where a.UsageCode = @usage--&lt;---------PASSAR AS UTILIZAÇÕES 
+
+order by d.Priority 
+
+
+
+select distinct 
+ 
+null as 'Code',
+case when z2.GroupCode is null then '*' else cast(z2.groupcode as char(2)) end as 'NCM Group Code',
+/*
+coalesce(z2.NcmCode, case when chave1='NCM' then campochave1 else
+                               case when chave2='NCM' then campochave2 else
+                               case when chave3='NCM' then campochave3 else
+                               case when chave4='NCM' then campochave4 else
+                               case when chave5='NCM' then campochave5 end end end end end,'*') as 'ncm',
+*/
+
+z3.Code as 'tax_regime',
+'SC' as HomeState,
+coalesce(z.Code,case when chave1='UF' then campochave1 else
+                               case when chave2='UF' then campochave2 else
+                               case when chave3='UF' then campochave3 else
+                               case when chave4='UF' then campochave4 else
+                               case when chave5='UF' then campochave5 end end end end end,'*') as 'DestinationState' ,
+                               'TRIBUTADO' as 'Icms_Type',
+                               '17' as 'intern_icms',
+                               (select top 1 b.EfctivRate as ICMS
+                                    from ostc a
+                                    inner join stc1 b on a.code=b.STCCode
+                                    where a.code=x.[Código do Imposto] and
+                                    b.STAType in (select Code from [@foc_param_f1] where u_tipo in (1,3))) as 'extern_icms',
+
+                               --case when z1.GroupCode &gt;'' then cast(z1.GroupCode as char(2)) else '*' end as 'production_origin',
+
+
+case when x.chave1='GRUPO_DE_CODIGO_DE_ORIGEM' then x.CampoChave1 else
+                                                                                 case when x.chave2='GRUPO_DE_CODIGO_DE_ORIGEM' then x.campoChave2 else
+                                                                                 case when x.chave3='GRUPO_DE_CODIGO_DE_ORIGEM' then x.CampoChave3 else
+                                                                                 case when x.chave4='GRUPO_DE_CODIGO_DE_ORIGEM' then x.CampoChave4 else
+                                                                                 case when x.chave5='GRUPO_DE_CODIGO_DE_ORIGEM' then x.campochave5 else
+                                                                                 null end end end end end as 'production_origin',
+                               isnull((select top 1 c.U_Lucro  as MVA
+                                    from ostc a
+                                    inner join stc1 b on a.code=b.STCCode
+                                    inner join osta c on c.Code=b.STACode 
+                                    where a.code=x.[Código do Imposto] and
+                                    b.STAType in (select Code from [@foc_param_f1] where u_tipo in (2))),0) as 'st',
+
+                                    coalesce(case when chave1='ITEM' then campochave1 else
+                                    case when chave2='ITEM' then campochave2 else
+                                    case when chave3='ITEM' then campochave3 else
+                                    case when chave4='ITEM' then campochave4 else
+                                    case when chave5='ITEM' then campochave5 end end end end end,'*') as 'item_code' ,
+
+
+                                    coalesce(case when chave1='PN' then campochave1 else
+                                    case when chave2='PN' then campochave2 else
+                                    case when chave3='PN' then campochave3 else
+                                    case when chave4='PN' then campochave4 else
+                                    case when chave5='PN' then campochave5 end end end end end,'*') as 'client_cnpj' ,
+
+                                    isnull((select top 1 c.U_pICUFD   as AliqInternaDest
+                                    from ostc a
+                                    inner join stc1 b on a.code=b.STCCode
+                                    inner join osta c on c.Code=b.STACode 
+                                    where a.code=x.[Código do Imposto] and
+                                    b.STAType in (select Code from [@foc_param_f1] where u_tipo in (3))),0) as 'icms_internal_destination',
+
+                                    isnull((select top 1 case when c.U_base&lt;&gt;100 then 100-c.U_Base end as RedBaseICMS
+                                    from ostc a
+                                    inner join stc1 b on a.code=b.STCCode
+                                    inner join osta c on c.Code=b.STACode 
+                                    where a.code=x.[Código do Imposto] and
+                                    b.STAType in (select Code from [@foc_param_f1] where u_tipo in (1))),0) as 'icms_reduction',
+
+                                    0 as 'fcp_st',
+                                    0 as 'fcp_base',
+                                    '*' as 'sell_type',
+                                    '*' as 'nature_operation',
+                                    '*' as 'city_destination',
+                                    x.Prioridade ,
+                                    x.row_num,
+
+       
+(select top 1 b.EfctivRate as ICMS
+from ostc a
+inner join stc1 b on a.code=b.STCCode
+where a.code=x.[Código do Imposto] and
+b.STAType in (select Code from [@foc_param_f1] where u_tipo=1)) as ICMS_Perc,
+(select top 1 b.EfctivRate as ICMS
+from ostc a
+inner join stc1 b on a.code=b.STCCode
+where a.code=x.[Código do Imposto] and
+b.STAType in (select Code from [@foc_param_f1] where u_tipo=2)) as ICMSST_Perc,
+(select top 1 b.EfctivRate as ICMS
+from ostc a
+inner join stc1 b on a.code=b.STCCode
+where a.code=x.[Código do Imposto] and
+b.STAType in (select Code from [@foc_param_f1] where u_tipo=3) 
+) as ICMSREM_Perc,
+(select top 1 b.EfctivRate as ICMS
+from ostc a
+inner join stc1 b on a.code=b.STCCode
+where a.code=x.[Código do Imposto] and
+b.STAType in (select Code from [@foc_param_f1] where u_tipo=4)) as ICMSDest_Perc,
+(select top 1 b.EfctivRate as ICMS
+from ostc a
+inner join stc1 b on a.code=b.STCCode
+where a.code=x.[Código do Imposto] and
+b.STAType in (select Code from [@foc_param_f1] where u_tipo=5)) as FCP_Perc
+
+
+into #tabz
+
+from 
+#tab x
+left join  (select a.code, 
+                              case when c.chave1='GRUPO_DE_ESTADO' then c.CampoChave1 else
+                                                                                 case when d.chave2='GRUPO_DE_ESTADO' then d.campoChave2 else
+                                                                                 case when e.chave3='GRUPO_DE_ESTADO' then e.CampoChave3 else
+                                                                                 case when f.chave4='GRUPO_DE_ESTADO' then f.CampoChave4 else
+                                                                                 case when g.chave5='GRUPO_DE_ESTADO' then g.campochave5 else
+                                                                                 null end end end end end
+ as ChaveGrupoUF
+                              from
+                              ocst a 
+                                    inner join ostg b on a.GroupCode=b.GroupCode
+                                    left join #tab c on c.CampoChave1=b.GroupName and c.chave1='GRUPO_DE_ESTADO'
+                                    left join #tab d on d.CampoChave2=b.GroupName and d.chave2='GRUPO_DE_ESTADO' 
+                                    left join #tab e on e.CampoChave3=b.Groupname and e.chave3='GRUPO_DE_ESTADO'
+                                    left join #tab f on f.CampoChave4=b.GroupName and f.chave4='GRUPO_DE_ESTADO' 
+                                    left join #tab g on g.CampoChave5=b.GroupName and g.chave5='GRUPO_DE_ESTADO'
+                                    
+                              ) z 
+                                     on 
+                                     
+                                     z.ChaveGrupoUF=case when chave1='GRUPO_DE_ESTADO' then x.CampoChave1 else
+                                                                                 case when chave2='GRUPO_DE_ESTADO' then x.campoChave2 else
+                                                                                 case when chave3='GRUPO_DE_ESTADO' then x.CampoChave3 else
+                                                                                 case when chave4='GRUPO_DE_ESTADO' then x.CampoChave4 else
+                                                                                 case when chave5='GRUPO_DE_ESTADO' then x.campochave5 else
+                                                                                 null end end end end end
+
+--left join  (select b.Groupcode, 
+--                              coalesce(c.CampoChave1, d.campochave2, e.campochave3, e.campochave4, e.campochave5) as ChaveGrupoOrigem
+--                              from
+--                              opsg b
+--                                    left join #tab c on c.CampoChave1=b.GroupName and c.chave1='GRUPO_DE_CODIGO_DE_ORIGEM'
+--                                    left join #tab d on d.CampoChave2=b.GroupName and d.chave2='GRUPO_DE_CODIGO_DE_ORIGEM' 
+--                                    left join #tab e on e.CampoChave3=b.Groupname and e.chave3='GRUPO_DE_CODIGO_DE_ORIGEM'
+--                                    left join #tab f on f.CampoChave4=b.GroupName and f.chave4='GRUPO_DE_CODIGO_DE_ORIGEM' 
+--                                    left join #tab g on g.CampoChave5=b.GroupName and g.chave5='GRUPO_DE_CODIGO_DE_ORIGEM'
+                                    
+--                              ) z1
+--                                     on 
+                                     
+--                                     z1.ChaveGrupoOrigem=case when chave1='GRUPO_DE_CODIGO_DE_ORIGEM' then x.CampoChave1 else
+--                                                                                 case when chave2='GRUPO_DE_CODIGO_DE_ORIGEM' then x.campoChave2 else
+--                                                                                 case when chave3='GRUPO_DE_CODIGO_DE_ORIGEM' then x.CampoChave3 else
+--                                                                                 case when chave4='GRUPO_DE_CODIGO_DE_ORIGEM' then x.CampoChave4 else
+--                                                                                 case when chave5='GRUPO_DE_CODIGO_DE_ORIGEM' then x.campochave5 else
+--                                                                                 null end end end end end
+
+--where campochave1='8471.90.19'
+
+/*
+left join  (select a.NcmCode, 
+                              case when c.chave1='GRUPO_DE_CODIGO_NCM' then c.CampoChave1 else
+                                                                                 case when d.chave2='GRUPO_DE_CODIGO_NCM' then d.campoChave2 else
+                                                                                 case when e.chave3='GRUPO_DE_CODIGO_NCM' then e.CampoChave3 else
+                                                                                 case when f.chave4='GRUPO_DE_CODIGO_NCM' then f.CampoChave4 else
+                                                                                 case when g.chave5='GRUPO_DE_CODIGO_NCM' then g.campochave5 else
+                                                                                 null end end end end end as ChaveGrupoNCM
+                              from
+                              oncm a 
+                                    inner join oncg b on a."Group"=b.GroupCode
+                                    left join #tab c on c.CampoChave1=b.GroupName and c.chave1='GRUPO_DE_CODIGO_NCM'
+                                    left join #tab d on d.CampoChave2=b.GroupName and d.chave2='GRUPO_DE_CODIGO_NCM' 
+                                    left join #tab e on e.CampoChave3=b.Groupname and e.chave3='GRUPO_DE_CODIGO_NCM'
+                                    left join #tab f on f.CampoChave4=b.GroupName and f.chave4='GRUPO_DE_CODIGO_NCM' 
+                                    left join #tab g on g.CampoChave5=b.GroupName and g.chave5='GRUPO_DE_CODIGO_NCM'
+							  where
+							  a.AbsEntry in (select distinct ncmcode from oitm where U_CadastrarF1='Y')
+                                    
+                              ) z2 
+                                     on 
+                                     
+                                     z2.ChaveGrupoNCM=case when chave1='GRUPO_DE_CODIGO_NCM' then x.CampoChave1 else
+                                                                                 case when chave2='GRUPO_DE_CODIGO_NCM' then x.campoChave2 else
+                                                                                 case when chave3='GRUPO_DE_CODIGO_NCM' then x.CampoChave3 else
+                                                                                 case when chave4='GRUPO_DE_CODIGO_NCM' then x.CampoChave4 else
+                                                                                 case when chave5='GRUPO_DE_CODIGO_NCM' then x.campochave5 else
+                                                                                 null end end end end end*/
+
+left join  (select b.GroupCode, 
+                              case when c.chave1='GRUPO_DE_CODIGO_NCM' then c.CampoChave1 else
+                                                                                 case when d.chave2='GRUPO_DE_CODIGO_NCM' then d.campoChave2 else
+                                                                                 case when e.chave3='GRUPO_DE_CODIGO_NCM' then e.CampoChave3 else
+                                                                                 case when f.chave4='GRUPO_DE_CODIGO_NCM' then f.CampoChave4 else
+                                                                                 case when g.chave5='GRUPO_DE_CODIGO_NCM' then g.campochave5 else
+                                                                                 null end end end end end as ChaveGrupoNCM
+                              from
+                              oncg b 
+                                    left join #tab c on c.CampoChave1=b.GroupName and c.chave1='GRUPO_DE_CODIGO_NCM'
+                                    left join #tab d on d.CampoChave2=b.GroupName and d.chave2='GRUPO_DE_CODIGO_NCM' 
+                                    left join #tab e on e.CampoChave3=b.Groupname and e.chave3='GRUPO_DE_CODIGO_NCM'
+                                    left join #tab f on f.CampoChave4=b.GroupName and f.chave4='GRUPO_DE_CODIGO_NCM' 
+                                    left join #tab g on g.CampoChave5=b.GroupName and g.chave5='GRUPO_DE_CODIGO_NCM'
+							  
+                                    
+                              ) z2 
+                                     on 
+                                     
+                                     z2.ChaveGrupoNCM=case when chave1='GRUPO_DE_CODIGO_NCM' then x.CampoChave1 else
+                                                                                 case when chave2='GRUPO_DE_CODIGO_NCM' then x.campoChave2 else
+                                                                                 case when chave3='GRUPO_DE_CODIGO_NCM' then x.CampoChave3 else
+                                                                                 case when chave4='GRUPO_DE_CODIGO_NCM' then x.CampoChave4 else
+                                                                                 case when chave5='GRUPO_DE_CODIGO_NCM' then x.campochave5 else
+                                                                                 null end end end end end
+
+--where campochave1='8471.90.19'
+
+left join  (select distinct --c.Prioridade, 
+
+b.code, 
+                              coalesce(c.CampoChave1, d.campochave2, e.campochave3, e.campochave4, e.campochave5) as ChaveRegimeTribPN
+                              from
+                              obni b 
+                                    
+                                    left join #tab c on c.CampoChave1=b.Descr and c.chave1='TIPO_TRIBUTARIO_PN'
+                                    left join #tab d on d.CampoChave2=b.Descr and d.chave2='TIPO_TRIBUTARIO_PN'
+                                    left join #tab e on e.CampoChave3=b.Descr and e.chave3='TIPO_TRIBUTARIO_PN'
+                                    left join #tab f on f.CampoChave4=b.Descr and f.chave4='TIPO_TRIBUTARIO_PN'
+                                    left join #tab g on g.CampoChave5=b.Descr and g.chave5='TIPO_TRIBUTARIO_PN'
+                                    
+                                    where  b.IndexType = 18
+                              ) z3 
+                                     on 
+                                     
+                                     z3.ChaveRegimeTribPN=case when chave1='TIPO_TRIBUTARIO_PN' then x.CampoChave1 else
+                                                                                 case when chave2='TIPO_TRIBUTARIO_PN' then x.campoChave2 else
+                                                                                 case when chave3='TIPO_TRIBUTARIO_PN' then x.CampoChave3 else
+                                                                                 case when chave4='TIPO_TRIBUTARIO_PN' then x.CampoChave4 else
+                                                                                 case when chave5='TIPO_TRIBUTARIO_PN' then x.campochave5 else
+                                                                                 null end end end end end
+                                     and ChaveRegimeTribPN is not null
+
+
+
+                                    where z3.Code is not null
+
+order by x.row_num
+
+
+select distinct
+z.Code,
+z.[NCM Group Code],
+tax_regime,
+HomeState,
+DestinationState,
+Icms_Type,
+intern_icms,
+extern_icms,
+case when z.production_origin is null then '*' else cast(k.Code as char(2)) end as production_origin,st,
+item_code,
+client_cnpj,
+icms_internal_destination,icms_reduction,
+fcp_st,fcp_base,sell_type,nature_operation,city_destination,Prioridade,
+--row_num,
+ICMS_Perc,ICMSST_Perc,ICMSREM_Perc,ICMSDest_Perc,FCP_Perc
+from #tabz z 
+left outer join opsg y on z.production_origin=y.GroupName
+left outer join opsc k on k.GroupCode=y.GroupCode
+
+drop table #tab
+drop table #tabz
+--select * from #tab</value>
+  </data>
+  <data name="ContasEmAtraso" xml:space="preserve">
+    <value>SELECT 
+T0.CardCode,
+ISNULL(sum(CASE when datediff(d,duedate, GETDATE())&gt;0 then 1 else 0 end), 0) as Quantidade
+
+ 
+
+FROM  
+[dbo].[OINV] T0  
+INNER  JOIN [dbo].[INV6] T1  ON  T1.DocEntry = T0.DocEntry  
+LEFT OUTER JOIN  (
+SELECT T1.InstId,T0.CardCode,T1.DocEntry Nro_pagamento,max(T0.DocDate) Data_Pagamento
+FROM  [dbo].[ORCT] T0  INNER  JOIN [dbo].[RCT2] T1  ON  T1.DocNum = T0.DocEntry   
+WHERE  T0.Canceled = 'N'  AND  T1.InvType = '13'
+GROUP BY T1.InstId,T0.CardCode,T1.DocEntry) PAG 
+ON PAG.CardCode=T0.CardCode and PAG.Nro_pagamento=T0.DocEntry and 
+PAG.InstId=T1.InstlmntID
+
+ 
+
+WHERE 
+T0.CardCode = '@Code' 
+AND  
+T1.TotalBlck &lt;&gt; T1.InsTotal  and
+(case T1.Status when 'O' then T1.InsTotal-T1.PaidToDate
+  when 'C' then 0 end)&lt;&gt;0
+
+ 
+
+GROUP BY T0.CardCode</value>
+  </data>
+  <data name="Determinacoes_IPI" xml:space="preserve">
+    <value>SELECT AbsId, KeyFld_1, KeyFld_2, KeyFld_3, KeyFld_4, KeyFld_5 FROM TCD1 WHERE AbsId in (SELECT Code FROM "@F1_IPI_PARAMS") order by Priority ASC</value>
+  </data>
+  <data name="Find_Adiantamento" xml:space="preserve">
+    <value>Select "Docentry", "BaseEntry" from DPI1 where BaseEntry = (Select top 1 DocEntry FROM ORDR WHERE NumAtCard = '{card}' AND CANCELED = 'N' ORDER BY DocEntry desc)</value>
+  </data>
+  <data name="Find_Order" xml:space="preserve">
+    <value>Select "Docentry" FROM ORDR WHERE NumAtCard = '{card}' AND CANCELED = 'N'</value>
+  </data>
+  <data name="Find_Pagamento" xml:space="preserve">
+    <value>SELECT T2.DocEntry  FROM RCT2  T0 INNER JOIN ORCT  T1 ON T0."DocNum" = T1."DocEntry" 
+INNER JOIN ODPI T2 ON T0."DocEntry" = T2."DocEntry"
+Where T0.InvType = 203 and T2.DocEntry = (Select TOP 1 "Docentry" from DPI1 where BaseEntry = (Select top 1 DocEntry FROM ORDR WHERE NumAtCard = '{card}' AND CANCELED = 'N' ORDER BY DocEntry desc))</value>
+  </data>
+  <data name="Impostos_IPI" xml:space="preserve">
+    <value>declare @tiposChave table
+(id int,
+descr char(30))
+insert into @tiposChave (id, descr) values (1,'PN') -- OCRD
+insert into @tiposChave (id, descr) values (2,'ITEM') --OITM
+insert into @tiposChave (id, descr) values (3,'GRUPO_DE_MATERIAIS') --OMGP
+insert into @tiposChave (id, descr) values (5,'NCM') --ONCM
+insert into @tiposChave (id, descr) values (6,'UF') --
+insert into @tiposChave (id, descr) values (9,'GRUPO_DE_ITEM') --OUGP
+insert into @tiposChave (id, descr) values (11,'GRUPO_DE_CLIENTES') --OCRG 
+insert into @tiposChave (id, descr) values (12,'GRUPO_DE_FORNECEDORES') --OCRG
+insert into @tiposChave (id, descr) values (16,'FILIAL') --OBPl
+insert into @tiposChave (id, descr) values (17,'TIPO_DE_MATERIAL') --OMTP
+insert into @tiposChave (id, descr) values (26,'TIPO_TRIBUTARIO_PN') --OBNI --18
+insert into @tiposChave (id, descr) values (27,'GRUPO_DE_ESTADO') --OSTG
+insert into @tiposChave (id, descr) values (28,'GRUPO_DE_CODIGO_DE_ORIGEM') --OPSG
+insert into @tiposChave (id, descr) values (29,'GRUPO_DE_CODIGO_NCM') --ONCG
+
+ 
+
+ 
+
+ 
+
+
+select
+d.AbsId as ID_da_regra,
+d.priority as Prioridade,
+d.DESCR,
+(select bx.U_Lucro  from STC1 ax inner join OSTA bx on ax.STaCode=bx.Code
+where ax.statype='7' and bx.Type=7 and a.taxcode=ax.stCcode) as 'MVA',
+
+ 
+
+ 
+
+ 
+
+isnull((select descr from @tiposchave where id=keyfld_1),'') as chave1 ,
+d.keyfld_1,
+isnull((select descr from @tiposchave where id=keyfld_2),'') as chave2 ,
+d.keyfld_2,
+isnull((select descr from @tiposchave where id=keyfld_3),'') as chave3 ,
+d.keyfld_3,
+isnull((select descr from @tiposchave where id=keyfld_4),'') as chave4 ,
+d.keyfld_4,
+isnull((select descr from @tiposchave where id=keyfld_5),'') as chave5 ,
+d.keyfld_5,
+CampoChave1 = case when d.keyfld_1=1 then (select top 1 taxid0  from crd7  where taxid0 is not null and c.keyfld_1_v=cardcode)
+                           when d.keyfld_1=2 then (select ItemCode from oitm where c.keyfld_1_v=itemcode)
+                           when d.keyfld_1=3 then (select descrip from omgp where c.keyfld_1_v=absEntry)
+                         when d.keyfld_1=5 then (select ncmcode from oncm where c.keyfld_1_v=absEntry)
+                           when d.keyfld_1=6  then C.keyfld_1_v
+                           when d.keyfld_1=9 then (select itmsgrpnam from oitb where c.keyfld_1_v=itmsgrpcod)
+                           when d.keyfld_1 in (11,12) then (select groupname from ocrg where c.keyfld_1_v=groupcode)
+							when d.keyfld_1 = 17 then (select Cast(OMTP.AbsEntry as varchar) from OMTP where c.keyfld_1_v=OMTP.AbsEntry)
+                           when d.keyfld_1=26 then (select Descr from obni where IndexType='18' and ID=c.keyfld_1_v)
+                           when d.KeyFld_1=27 then (select groupName from ostg where GroupCode=c.KeyFld_1_V)
+                           when d.KeyFld_1=28 then (select groupName from opsg where GroupCode=c.KeyFld_1_V)
+                           when d.KeyFld_1=29 then (select groupName from oncg where GroupCode=c.KeyFld_1_V)
+                           when d.keyfld_1=16 then (select BplName from OBPL where c.keyfld_1_v=BplId) end,        
+
+ 
+
+ 
+
+ 
+
+CampoChave2 = case when d.keyfld_2=1 then (select top 1 taxid0  from crd7  where taxid0 is not null and  c.keyfld_2_v=cardcode)
+                           when d.keyfld_2=2 then (select itemCode from oitm where c.keyfld_2_v=itemcode)
+                           when d.keyfld_2=3 then (select descrip from omgp where c.keyfld_2_v=absEntry)
+                         when d.keyfld_2=5 then (select ncmcode from oncm where c.keyfld_2_v=absEntry)
+                           when d.keyfld_2=6  then C.keyfld_2_v
+                           when d.keyfld_2=9 then (select itmsgrpnam from oitb where c.keyfld_2_v=itmsgrpcod)
+                           when d.keyfld_2 in (11,12) then (select groupname from ocrg where c.keyfld_2_v=groupcode)
+						   when d.keyfld_2 = 17 then (select Cast(OMTP.AbsEntry as varchar) from OMTP where c.keyfld_2_V=OMTP.AbsEntry)
+                           when d.keyfld_2=26 then (select Descr from obni where IndexType='18' and ID=c.keyfld_2_v)
+                           when d.keyfld_2=27 then (select groupName from ostg where GroupCode=c.keyfld_2_V)
+                           when d.keyfld_2=28 then (select groupName from opsg where GroupCode=c.keyfld_2_V)
+                           when d.keyfld_2=29 then (select groupName from oncg where GroupCode=c.keyfld_2_V)
+                           when d.keyfld_2=16 then (select BplName from OBPL where c.keyfld_2_v=BplId) end,  
+
+ 
+
+ 
+CampoChave3 = case when d.keyfld_3=1 then (select top 1 taxid0  from crd7  where taxid0 is not null and  c.keyfld_3_v=cardcode)
+                           when d.keyfld_3=2 then (select itemCode from oitm where c.keyfld_3_v=itemcode)
+                           when d.keyfld_3=3 then (select descrip from omgp where c.keyfld_3_v=absEntry)
+                         when d.keyfld_3=5 then (select ncmcode from oncm where c.keyfld_3_v=absEntry)
+                           when d.keyfld_3=6  then C.keyfld_3_v
+                           when d.keyfld_3=9 then (select itmsgrpnam from oitb where c.keyfld_3_v=itmsgrpcod)
+                           when d.keyfld_3 in (11,12) then (select groupname from ocrg where c.keyfld_3_v=groupcode)
+						   when d.keyfld_3 = 17 then (select Cast(OMTP.AbsEntry as varchar) from OMTP where c.keyfld_3_V=OMTP.AbsEntry)
+                           when d.keyfld_3=26 then (select Descr from obni where IndexType='18' and ID=c.keyfld_3_v)
+                           when d.keyfld_3=27 then (select groupName from ostg where GroupCode=c.keyfld_3_V)
+                           when d.keyfld_3=28 then (select groupName from opsg where GroupCode=c.keyfld_3_V)
+                           when d.keyfld_3=29 then (select groupName from oncg where GroupCode=c.keyfld_3_V)
+                           when d.keyfld_3=16 then (select BplName from OBPL where c.keyfld_3_v=BplId) end,  
+
+ 
+
+CampoChave4 = case when d.keyfld_4=1 then (select top 1 taxid0  from crd7  where taxid0 is not null and  c.keyfld_4_v=cardcode)
+                           when d.keyfld_4=2 then (select itemCode from oitm where c.keyfld_4_v=itemcode)
+                           when d.keyfld_4=3 then (select descrip from omgp where c.keyfld_4_v=absEntry)
+                         when d.keyfld_4=5 then (select ncmcode from oncm where c.keyfld_4_v=absEntry)
+                           when d.keyfld_4=6  then C.keyfld_4_v
+                           when d.keyfld_4=9 then (select itmsgrpnam from oitb where c.keyfld_4_v=itmsgrpcod)
+                           when d.keyfld_4 in (11,12) then (select groupname from ocrg where c.keyfld_4_v=groupcode)
+						   when d.keyfld_4 = 17 then (select Cast(OMTP.AbsEntry as varchar) from OMTP where c.keyfld_4_v=OMTP.AbsEntry)
+                           when d.keyfld_4=26 then (select Descr from obni where IndexType='18' and ID=c.keyfld_4_v)
+                           when d.keyfld_4=27 then (select groupName from ostg where GroupCode=c.keyfld_4_V)
+                           when d.keyfld_4=28 then (select groupName from opsg where GroupCode=c.keyfld_4_V)
+                           when d.keyfld_4=29 then (select groupName from oncg where GroupCode=c.keyfld_4_V)
+                           when d.keyfld_4=16 then (select BplName from OBPL where c.keyfld_4_v=BplId) end,        
+
+ 
+
+ 
+
+CampoChave5 = case when d.keyfld_5=1 then (select top 1 taxid0  from crd7  where taxid0 is not null and  c.keyfld_5_v=cardcode)
+                           when d.keyfld_5=2 then (select itemCode from oitm where c.keyfld_5_v=itemcode)
+                           when d.keyfld_5=3 then (select descrip from omgp where c.keyfld_5_v=absEntry)
+                         when d.keyfld_5=5 then (select ncmcode from oncm where c.keyfld_5_v=absEntry)
+                           when d.keyfld_5=6  then C.keyfld_5_v
+                           when d.keyfld_5=9 then (select itmsgrpnam from oitb where c.keyfld_5_v=itmsgrpcod)
+                           when d.keyfld_5 in (11,12) then (select groupname from ocrg where c.keyfld_5_v=groupcode)
+						   when d.keyfld_5 = 17 then (select Cast(OMTP.AbsEntry as varchar) from OMTP where c.keyfld_5_v=OMTP.AbsEntry)
+                           when d.keyfld_5=26 then (select Descr from obni where IndexType='18' and ID=c.keyfld_5_v)
+                           when d.keyfld_5=27 then (select groupName from ostg where GroupCode=c.keyfld_5_V)
+                           when d.keyfld_5=28 then (select groupName from opsg where GroupCode=c.keyfld_5_V)
+                           when d.keyfld_5=29 then (select groupName from oncg where GroupCode=c.keyfld_5_V)
+                           when d.keyfld_5=16 then (select BplName from OBPL where c.keyfld_5_v=BplId) end,        
+
+ 
+
+ 
+
+ 
+
+efctFrom as 'Desde',
+efctto as 'Ate',
+(select ID from ousg where id=a.usagecode and id = 101) as 'Utilizacao',
+a.taxcode as 'Código do Imposto',
+e.ipi,
+ROW_NUMBER() OVER (
+ 
+
+ORDER BY d.Priority
+
+
+) row_num
+
+ 
+
+into #tab
+
+ 
+from
+tcd5 a
+left join tcd3 b on a.tcd3id=b.absid
+inner join tcd2 c on b.tcd2id=c.absid
+inner join tcd1 d on c.tcd1id=d.absid
+left join
+(
+Select a.Code, b.Rate AS "ipi"
+from ostc a
+Left join
+(
+SELECT a.Code, e.Rate
+from ostc a
+inner join stc1 b on b.STCCode = a.Code
+inner join ostt c on c.AbsId =  b.STAType
+inner join OSTA e on b.STACode = e.Code  and e.Type = b.STAType
+--inner join
+--    (
+--    Select a.Code, MAX(e.EfctDate) AS "DataVigente"
+--    from ostc a
+--    inner join stc1 b on b.STCCode = a.Code
+--    inner join ostt c on c.AbsId =  b.STAType
+--    inner join STA1 e on b.STACode = e.StaCode
+--    where c.Name in (SELECT Name FROM ostt where UPPER(Name) like UPPER('%IPI%'))
+--    group by a.Code
+--    ) e1 on e.EfctDate = "DataVigente" and e1.Code = a.Code
+where c.Name in (SELECT Name FROM ostt where UPPER(Name) like UPPER('%IPI%'))
+) b on b.Code = a.Code
+) e on e.Code = a.taxcode
+
+where a.UsageCode = @usage and d.AbsId = @idRegra --&lt;---------PASSAR A UTILIZAÇÃO E REGRA DE IMPOSTO
+
+order by d.Priority
+
+select 
+* 
+from 
+#tab x</value>
+  </data>
+  <data name="Segmentos" xml:space="preserve">
+    <value>SELECT T1.FldValue, T1.Descr FROM CUFD T0 LEFT JOIN UFD1 T1 ON T0.FieldID = T1.FieldID AND T0.TableID = T1.TableID
+WHERE T0.TableID = 'OCRD' AND T0.AliasID = 'area_negocio' AND T1.FldValue is not null</value>
+  </data>
+</root>
